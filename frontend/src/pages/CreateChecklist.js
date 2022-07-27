@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import apiLink from '../components/api';
+import './CreateChecklist.scss';
 
 const CreateChecklist = () => {
 	const navigator = useNavigate();
@@ -44,10 +45,11 @@ const CreateChecklist = () => {
 	};
 
 	return (
-		<div>
-			<h1>Create a Checklist my friend</h1>
+		<div className='create-checklist'>
+			<img src='/image/thomas-bormans-pcpsVsyFp_s-unsplash.jpeg' alt='' />
+			<h1>Create Checklist</h1>
 			<form onSubmit={createChecklist}>
-				<div>
+				<div className='input-container'>
 					<label htmlFor='listTitle'>Checklist Title</label>
 					<input
 						type='text'
@@ -56,18 +58,12 @@ const CreateChecklist = () => {
 						onChange={(e) => setListTitle(e.target.value)}
 					/>
 				</div>
-				<div>
+				<div className='input-container'>
 					<label htmlFor='listImg'>Choose Checklist Image</label>
 					<input type='file' id='listImg' onChange={onFileChange} />
 				</div>
 				<h2>Create Your Checkpoints</h2>
-				<ul>
-					{checkPointArray.map((checkPoint, index) => (
-						<li key={index}>{checkPoint}</li>
-					))}
-				</ul>
-				<div>
-					<label htmlFor='checkPointTitle'>Add another Checkpoint</label>
+				<div className='input-container'>
 					<input
 						type='text'
 						id='checkPointTitle'
@@ -75,8 +71,23 @@ const CreateChecklist = () => {
 						onChange={(e) => setCurrentCheckpoint(e.target.value)}
 					/>
 				</div>
-				<button onClick={addCheckpoint}>Add Checkpoint</button>
-				<button type='submit'>Add Checklist</button>
+				<div className='btn-add-checkpoint'>
+					<button onClick={addCheckpoint}>Add Checkpoint</button>
+				</div>
+				<div className='entered-checkpoints'>
+					{checkPointArray.length > 0 && <h2>Entered Checkpoints</h2>}
+					<ul>
+						{checkPointArray.map((checkPoint, index) => (
+							<li key={index}>
+								<span>☐</span>
+								<span>{checkPoint}</span>
+							</li>
+						))}
+					</ul>
+				</div>
+				<div className='btn-add-checklist'>
+					<button type='submit'>Confirm Checklist</button>
+				</div>
 			</form>
 		</div>
 	);

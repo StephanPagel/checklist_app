@@ -3,33 +3,60 @@
         GENERAL
 ##################################
 */
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800&display=swap');
+
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
-:root{
-  --colordarkblue:#2b6777;
-  --colorlightblue:#c8d8e4;
-  --colorwhite:#ffffff;
-  --colorgrey:#f2f2f2;
-  --colorgreen:#52ab98;
+:root {
+	--colordarkblue: #2b6777;
+	--colorlightblue: #c8d8e4;
+	--colorwhite: #ffffff;
+	--colorgrey: #f2f2f2;
+	--colorgreen: #52ab98;
+	--colorlightblack: #343a40;
+	--colorblack: #212529;
+	--colorred: #f03e3e;
 }
 
 html {
-    font-size: 62.5%;
+	font-size: 62.5%;
 }
 
 body {
-    max-width: 1440px;
-    margin: 0 auto;
-    background-color: var(--colorgrey);
+	max-width: 1440px;
+	margin: 0 auto;
+	background-color: var(--colorgrey);
+	font-family: 'Raleway', sans-serif;
 }
 
 .space {
-    width: 90%;
-    margin: 0 auto;
+	width: 90%;
+	margin: 0 auto;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+button {
+	border: none;
+	background-color: var(--colordarkblue);
+	color: var(--colorwhite);
+	padding: 1rem 3rem;
+	border-radius: 10px;
+}
+
+button:hover {
+	background-color: var(--colorgreen);
+}
+button:active {
+	background-color: var(--colorgreen);
 }
 
 /* 

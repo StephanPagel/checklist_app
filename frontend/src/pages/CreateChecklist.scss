@@ -1,0 +1,70 @@
+.create-checklist {
+	img {
+		width: 100%;
+		height: 25vh;
+		object-fit: cover;
+	}
+	h1 {
+		text-align: center;
+		margin: 2rem 0rem;
+		color: var(--colorblack);
+		font-size: 3.6rem;
+	}
+
+  h2 {
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+  }
+
+  form {
+    padding: 0 5%;
+  }
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+
+  input {
+    padding: 0.5rem 0.5rem;
+    border-radius: 5px;
+    width: 100%;
+    margin-right: 20%;
+    border: solid 1px black;
+  }
+  input[type='file'] {
+    border: none;
+  }
+}
+
+.btn-add-checkpoint {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.entered-checkpoints {
+  margin-bottom: 5rem;
+
+
+  ul {
+    list-style: none;
+    font-size: 1.6rem;
+    margin-left: 5rem;
+    li {
+      display: flex;
+      gap: 1.5rem;
+    }
+  }
+}
+
+.btn-add-checklist {
+  text-align: center;
+  button {
+    font-size: 2rem;
+    box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.202);
+  }
+}

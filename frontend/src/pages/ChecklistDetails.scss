@@ -1,0 +1,88 @@
+.checklistdetails {
+  img {
+    width: 100%;
+    height: 25vh;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  h1 {
+    text-align: center;
+    margin: 2rem 0rem;
+    color: var(--colorblack);
+    font-size: 3.6rem;
+  }
+
+  button {
+    background-color: #f03e3e;
+  }
+
+  .button-cancel {
+    background-color: var(--colordarkblue);
+  }
+}
+
+
+.checkpoints-container {
+  display: flex;
+  justify-content: center;
+
+  ul {
+    list-style: none;
+    font-size: 2rem;
+    flex-grow: 1;
+    margin: 0 5%;
+
+    li {
+      display: flex;
+      gap: 2rem;
+      padding: 1rem 4rem;
+      margin-bottom: 1rem;
+      border: 1px solid var(--colorblack);
+      border-radius: 10px;
+      transition: all 0.5s linear;
+
+      span:nth-of-type(1) {
+        flex-basis: 10%;
+      }
+      span:nth-of-type(2) {
+        flex-basis: 90%;
+      }
+    }
+  }
+}
+
+.task-checked {
+  background-color: var(--colorgreen);
+}
+
+.detail-buttons {
+  margin: 2rem 0 7.5em 0;
+  text-align: center;
+}
+
+.confirm-delete {
+  span {
+    display: inline-block;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+  }
+  div {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+  }
+}
+
+.home-button-container {
+  text-align: center;
+}
+
+.home-button {
+  border: none;
+	background-color: var(--colordarkblue);
+	color: var(--colorwhite);
+	padding: 1rem 3rem;
+	border-radius: 10px;
+  font-size: 2rem;
+}

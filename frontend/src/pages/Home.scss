@@ -6,16 +6,21 @@
     }
     h1 {
         text-align: center;
-        margin: 3rem 0rem;
+        margin: 2rem 0rem;
+        color: var(--colorblack);
+        font-size: 3.6rem;
     }
     section {
-        display: grid;grid-template-columns: 1fr 1fr;
-        justify-items: center;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
     }
+
     div {
         background-color: var(--colorlightblue);
         width: 100%;
         padding: 5rem 0;
-        
+        color: var(--colorblack);
+        font-size: 2rem;
+        text-align: center;
     }
 }

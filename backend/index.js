@@ -15,7 +15,7 @@ const morgan = require("morgan");
 const cors = require("cors");
 const { v4: uuid } = require("uuid");
 const multer = require("multer");
-const { readJSON, writeJSON } = require("./filesystem");
+const { readJSON, writeJSON, deleteFile } = require("./filesystem");
 
 const PORT = process.env.PORT || 9000;
 const pathChecklist = "./checklist.json";
@@ -134,6 +134,24 @@ app.put("/resetchecked/:id", (req, res)=>{
           res.json(chosenChecklist)
     })
 })
+
+app.delete("/deletelist/:id", (req, res) => {
+  const listid = req.params.id
+  readJSON(pathChecklist)
+  .then(checklistArray => {
+    const chosenChecklist = checklistArray.find(checklist => checklist.id === listid)
+    deleteFile(`./image/${chosenChecklist.imgPath}`)
+    return checklistArray
+  })
+  .then((checklistArray) => {
+    const updatedChecklistArray = checklistArray.filter((checklist) => checklist.id!==listid) 
+    return updatedChecklistArray
+  })
+  .then(updatedChecklistArray => writeJSON(pathChecklist, updatedChecklistArray))
+  .then(updatedChecklistArray => res.json(updatedChecklistArray))
+  .catch(err => res.json({message:"Error"}))
+})
+
 
 app.use((_, res) => {
   res.status(404).send("ERROR 404 - Page not found");

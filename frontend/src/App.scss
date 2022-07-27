@@ -1,0 +1,57 @@
+/* 
+##################################
+        GENERAL
+##################################
+*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+  --colordarkblue:#2b6777;
+  --colorlightblue:#c8d8e4;
+  --colorwhite:#ffffff;
+  --colorgrey:#f2f2f2;
+  --colorgreen:#52ab98;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    max-width: 1440px;
+    margin: 0 auto;
+    background-color: var(--colorgrey);
+}
+
+.space {
+    width: 90%;
+    margin: 0 auto;
+}
+
+/* 
+##################################
+        HEADER
+##################################
+*/
+
+/* 
+# # # # # # # # # # # # # # 
+        NAV
+# # # # # # # # # # # # # # 
+*/
+
+/* 
+##################################
+        MAIN
+##################################
+*/
+
+/* 
+##################################
+        FOOTER
+##################################
+*/

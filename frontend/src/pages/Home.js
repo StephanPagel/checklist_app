@@ -1,6 +1,7 @@
 import {useState, useEffect} from 'react'
 import {Link} from 'react-router-dom'
 import apiLink from "../components/api"
+import "./Home.scss"
 
 const Home = () => {
 
@@ -13,14 +14,17 @@ const Home = () => {
     },[])
 
     return (
-      <div>
+      <div className="home">
+        <img src="image/surja-sen-das-raj-cM94J4lOSU0-unsplash.jpg" alt="todo" />
         <h1>Checklists</h1>
 
-        {checklists.map((list) => (
-          <div key={list.id}>
-            <Link to={`/checklistdetails/${list.id}`}>{list.title}</Link>
-          </div>
-        ))}
+        <section>
+          {checklists.map((list) => (
+            <div key={list.id}>
+              <Link to={`/checklistdetails/${list.id}`}>{list.title}</Link>
+            </div>
+          ))}
+        </section>
       </div>
     );
 }

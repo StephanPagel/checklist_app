@@ -1,0 +1,23 @@
+nav {
+    display:flex;
+    align-items: baseline;
+    gap: 2rem;
+    padding: 2rem 5%;
+    background-color: var(--colordarkblue);
+    color: var(--colorwhite);
+    h2 {
+        font-size:2.5rem;
+    }
+    ul {
+        display:flex;
+        justify-content: space-around;
+        flex: 1;
+        list-style: none;
+        a {
+            font-size: 2rem;
+            color: inherit;
+            text-decoration: none;
+        }
+    }
+}
+

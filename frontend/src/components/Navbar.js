@@ -1,9 +1,10 @@
 import {Link} from 'react-router-dom';
+import "./Navbar.scss"
 
 const Navbar = () => {
   return ( 
     <nav>
-      <h2>Check de Check check</h2>
+      <h2>Die Checker</h2>
       <ul>
         <li><Link to={'/'}>Home</Link></li>
         <li><Link to={'/createchecklist'}>Add Checklist</Link></li>

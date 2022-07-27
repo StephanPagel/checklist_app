@@ -47,7 +47,7 @@ const ChecklistDetails = () => {
                     </div>} 
                 </div>
 
-				<img src={`${apiLink}/${checklistDetails.imgPath}`} alt='img' />
+				<img src={checklistDetails.imgPath && `${apiLink}/${checklistDetails.imgPath}`} alt='random' />
 				<h1>{checklistDetails.title}</h1>
 				<ul>
 					{checklistDetails.checkPoints?.map((detail) => (

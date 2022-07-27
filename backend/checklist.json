@@ -1,0 +1,80 @@
+[
+  {
+    "title": "Musterliste",
+    "id": "123",
+    "imgPath": "imageFile",
+    "checkPoints": [
+      {
+        "title": "MusterCheckPoint1",
+        "id": "456",
+        "checked": false
+      },
+      {
+        "title": "MusterCheckPoint2",
+        "id": "789",
+        "checked": false
+      }
+    ]
+  },
+  {
+    "title": "Musterliste2",
+    "id": "321",
+    "imgPath": "imageFile",
+    "checkPoints": [
+      {
+        "title": "MusterCheckPoint1",
+        "id": "456",
+        "checked": false
+      },
+      {
+        "title": "MusterCheckPoint2",
+        "id": "789",
+        "checked": false
+      }
+    ]
+  },
+  {
+    "title": "List 1",
+    "id": "747b9b89-9e76-4425-bb69-b740bb18ac07",
+    "imgPath": "e7569f88025b044556dfaa0a9b96653b",
+    "checkPoints": [
+      {
+        "title": "Essen",
+        "id": "7419cb7c-3fe3-413d-9263-2951988d465a",
+        "checked": false
+      },
+      {
+        "title": "Trinken",
+        "id": "c7c4fcd8-8759-45be-b173-23ce638486df",
+        "checked": false
+      },
+      {
+        "title": "Schlafen",
+        "id": "22a9581f-1530-4a89-813f-24fdcc756178",
+        "checked": false
+      }
+    ]
+  },
+  {
+    "title": "List 1",
+    "id": "469df2cc-9052-4411-9a6d-175352b01c0a",
+    "imgPath": "6e9405f5b2416715d37a0e92105be8b9",
+    "checkPoints": [
+      {
+        "title": "Atmen",
+        "id": "2c752e09-16a9-4bcc-80d9-7e0c139b2702",
+        "checked": false
+      },
+      {
+        "title": "Bewegen",
+        "id": "cdfdc54d-92bc-42e4-95f9-09208d15c7dc",
+        "checked": false
+      },
+      {
+        "title": "Denken",
+        "id": "1b421678-a94a-4183-9577-bea5862df262",
+        "checked": false
+      }
+    ]
+  }
+]

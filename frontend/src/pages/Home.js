@@ -1,6 +1,6 @@
 import {useState, useEffect} from 'react'
 import {Link} from 'react-router-dom'
-import apiLink from "./api"
+import apiLink from "../components/api"
 
 const Home = () => {
 

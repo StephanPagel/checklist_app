@@ -76,8 +76,8 @@ app.post("/createlist", uploadImage.single("titleImage"), (req, res) => {
   .then((updatedChecklistArray)=> {
     return writeJSON(pathChecklist, updatedChecklistArray)
   })
-  .then((updatedChecklistArray)=> {
-    res.json(updatedChecklistArray)
+  .then(()=> {
+    res.json(newchecklist);
   })
   .catch(err=> {
     res.status(500).send(err)
@@ -104,8 +104,9 @@ app.put("/togglechecked/:listid/:checkpointid",(req, res)=>{
         return updatedChecklists
     })
     .then(updatedChecklists=>{
-        writeJSON(pathChecklist,updatedChecklists)
-        res.json(updatedChecklists)
+        writeJSON(pathChecklist,updatedChecklists);
+        const updatedChecklist = updatedChecklists.find(checklist => checklist.id === listid);
+        res.json(updatedChecklist);
     })
 })
 
